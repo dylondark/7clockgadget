@@ -86,6 +86,8 @@ PlasmoidItem {
             }
             width: parent.width
 
+            anchors.margins: 10
+
             Image {
                 id: face
                 anchors.centerIn: parent
