@@ -88,6 +88,8 @@ PlasmoidItem {
 
             anchors.margins: 10
 
+            property real offsetSize: 0.95
+
             Image {
                 id: face
                 anchors.centerIn: parent
@@ -101,8 +103,8 @@ PlasmoidItem {
                 source: "../images/trad_h.png"
                 rotation: hours * 30 + (minutes/2)
                 z: 997
-                width: face.width / 10
-                height: face.height
+                width: (face.width * clock.offsetSize) / 10
+                height: face.height * clock.offsetSize
                 anchors.centerIn: parent
             }
 
@@ -110,8 +112,8 @@ PlasmoidItem {
                 source: "../images/trad_m.png"
                 rotation: minutes * 6
                 z: 998
-                width: face.width / 10
-                height: face.height
+                width: (face.width * clock.offsetSize) / 10
+                height: face.height * clock.offsetSize
                 anchors.centerIn: parent
             }
 
@@ -120,8 +122,8 @@ PlasmoidItem {
                 source: "../images/trad_s.png"
                 rotation: seconds * 6
                 z: 999
-                width: face.width / 10
-                height: face.height
+                width: (face.width * clock.offsetSize) / 10
+                height: face.height * clock.offsetSize
                 anchors.centerIn: parent
             }
 
@@ -130,8 +132,8 @@ PlasmoidItem {
                 anchors.centerIn: parent
                 source: "../images/trad_dot.png"
                 z: 1000
-                width: face.width / 10
-                height: face.height
+                width: (face.width * clock.offsetSize) / 10
+                height: face.height * clock.offsetSize
             }
         }
     }
