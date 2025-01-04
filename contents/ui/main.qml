@@ -101,12 +101,18 @@ PlasmoidItem {
                 source: "../images/trad_h.png"
                 rotation: hours * 30 + (minutes/2)
                 z: 997
+                width: face.width / 10
+                height: face.height
+                anchors.centerIn: parent
             }
 
             Hand {
                 source: "../images/trad_m.png"
                 rotation: minutes * 6
                 z: 998
+                width: face.width / 10
+                height: face.height
+                anchors.centerIn: parent
             }
 
             Hand {
@@ -114,13 +120,18 @@ PlasmoidItem {
                 source: "../images/trad_s.png"
                 rotation: seconds * 6
                 z: 999
+                width: face.width / 10
+                height: face.height
+                anchors.centerIn: parent
             }
 
             Image {
                 id: center
-                anchors.centerIn: clock
+                anchors.centerIn: parent
                 source: "../images/trad_dot.png"
                 z: 1000
+                width: face.width / 10
+                height: face.height
             }
         }
     }
